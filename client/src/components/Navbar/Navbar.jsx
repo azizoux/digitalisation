@@ -5,7 +5,7 @@ import basket from "../../assets/basket_icon.png";
 import search from "../../assets/search_icon.png";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ setShowAuthModal }) => {
   const [menuActive, setMenuActive] = useState("controlleur");
   return (
     <div className="navbar">
@@ -44,7 +44,7 @@ const Navbar = () => {
           <img src={basket} alt="" />
           <div className="dot"></div>
         </div>
-        <button>Sign In</button>
+        <button onClick={() => setShowAuthModal(true)}>Sign In</button>
       </div>
     </div>
   );
